@@ -2005,6 +2005,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2025,6 +2026,7 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="date"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -2033,6 +2035,7 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="date"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #e89980;
@@ -2075,12 +2078,9 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
 	select {
 		height: 3em;
-	}
-
-	textarea {
-		padding: 0.75em 1em;
 	}
 
 	input[type="checkbox"],
@@ -2269,7 +2269,7 @@
 			display: block;
 			margin: 3em 0 3em -3em;
 			position: relative;
-			width: calc(100% + 9em);
+			width: calc(100% + 6em);
 		}
 
 			.box .image.featured img {
