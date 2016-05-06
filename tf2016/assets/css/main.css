@@ -84,6 +84,12 @@
 	.container {
 		width: 60em;
 	}
+        
+        /* uppercase */
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+        
 
 	@media screen and (max-width: 1680px) {
 
@@ -2930,7 +2936,7 @@
 			-webkit-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background: none;
+			background: #444444;
 			color: rgba(255, 255, 255, 0.75);
 			position: absolute;
 		}
@@ -3029,7 +3035,8 @@
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		/*background-image: url("images/overlay.png"), url("../../images/banner.jpg");*/
+                background-image: url("http://wallpaper.ultradownloads.com.br/109449_Papel-de-Parede-Campo-de-Trigo--109449_1400x1050.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -3274,6 +3281,7 @@
 
 				#banner h2 {
 					font-size: 3.5em;
+                                        text-transform: uppercase;
 				}
 
 	}
