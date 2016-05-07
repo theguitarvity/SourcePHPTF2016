@@ -9,7 +9,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css" />
-        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]--> 
+
+        <script>
+        </script>
     </head>
     <body>
         <div id="page-wrapper">
@@ -49,7 +52,7 @@
                     <p class="text-uppercase">Preencha abaixo seus dados pessoais para reservar sua vaga.</p>
                 </header>
                 <div class="box">
-                    <form action="cadastrar.php" method="post">
+                    <form name="form" action="cadastrar.php" method="post">
                         <h3 class="text-uppercase">Dados Pessoais</h3>
                         <div class="row uniform 50%"> 
                             <div class="6u 12u(mobilep)">
@@ -64,15 +67,15 @@
                                 <input type="text" name="rg" id="rg" placeholder="RG" required/>
                             </div>
                             <div class="6u 12u(mobilep)">
-                                <input type="text" name="cpf" id="cpf" placeholder="CPF" required/>
+                                <input type="text" onblur="cpfValidate(this.value)" name="cpf" id="cpf" maxlength="14" placeholder="CPF" required/>
                             </div>
                         </div>
                         <div class="row uniform 50%"> 
                             <div class="6u 12u(mobilep)">
-                                <input type="date" name="data" id="data" placeholder="Data de Nascimento" required/>
+                                <input type="date" name="data" onblur="calcular(this.value)" id="data" placeholder="Data de Nascimento" required/>
                             </div>
                             <div class="6u 12u(mobilep)">
-                                <input type="text"  name="idade" id="idade" placeholder="Idade" required/>
+                                <input type="text" name="idade" id="idade" placeholder="Idade" disabled/>
                             </div>
                         </div><br  />
                         <h3>Endereço</h3>
