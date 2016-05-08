@@ -39,10 +39,12 @@ class TransformandoDAO {
             );
             return $stmt->execute($param);
         } catch (PDOException $ex) {
-            echo $ex->getMessage();
+            echo $ex->getMessage() . "<br  />";
+            echo $ex->getLine() . "<br  />";
+            echo $ex->getFile() . "<br  />";
         }
     }
-    
+
     //metodo responsavel por retornar o codigo do transformando de acordo com o email indicado no parametro
     function consultarCodTransformando($email) {
         try {
@@ -59,29 +61,50 @@ class TransformandoDAO {
                 return "";
             }
         } catch (PDOException $ex) {
+            echo $ex->getMessage() . "<br  />";
+            echo $ex->getLine() . "<br  />";
+            echo $ex->getFile() . "<br  />";
+        }
+    }
+
+    //metodo responsavel por estabelecer um idApoio padrao para cada transformando cadastrado
+
+    function estabeleceId() {
+        try {
+            $cons = $this->pdo->prepare("SELECT * FROM apoio WHERE idApoio = :id");
+            $param = array(
+                ":id" => 0
+            );
+            $cons->execute($param);
+
+            if ($cons->rowCount() > 0) {
+                $consulta = $cons->fetch(PDO::FETCH_ASSOC);
+                return $consulta['idApoio'];
+            } else {
+                return "";
+            }
+        } catch (PDOException $ex) {
             echo $ex->getMessage();
             echo $ex->getLine();
             echo $ex->getFile();
         }
     }
-    
+
     //metodo responsavel por vericar se ja existe o email digitado no campo no banco 
-     function consultarEmail($email) {
+    function consultarEmail($email) {
         try {
             $cons = $this->pdo->prepare("SELECT * FROM transformando WHERE emailTransformando=:email");
             $param = array(
-                ":email"=>$email
+                ":email" => $email
             );
             $cons->execute($param);
-            
-            if($cons->rowCount()>0){
+
+            if ($cons->rowCount() > 0) {
                 return true;
-            }
-            else{
+            } else {
                 return false;
             }
-        } 
-        catch (PDOException $ex) {
+        } catch (PDOException $ex) {
             echo $ex->getMessage();
             echo $ex->getLine();
             echo $ex->getFile();
