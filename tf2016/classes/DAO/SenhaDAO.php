@@ -16,7 +16,7 @@ class SenhaDAO {
         $this->pdo = $this->conn->Connect();
     }
 
-    function cadadastrarTF(Senha $senha) {
+    function cadadastrarTF($senha) {
         try {
             $cad = $this->pdo->prepare("INSERT INTO senha(senha, idTransformando, idApoio) VALUES(:senha, :tf, :ap)");
             $param = array(

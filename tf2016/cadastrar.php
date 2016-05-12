@@ -34,26 +34,38 @@ if (isset($_POST['btn_cad'])) {
 
     $conf = $_POST['conf'];
 
-    if($conf == $_POST['senha']) {
+    if ($conf == $_POST['senha']) {
         if (!$tfDAO->consultarEmail($_POST['email'])) {
             if ($tfDAO->cadastrar($tf)) {
 
                 $codTF = $tfDAO->consultarCodTransformando($_POST['email']);
                 $senha->setSenha($_POST['senha']);
                 $senha->setCodTF($codTF);
-                if($senhaDAO->cadadastrarTF($senha)){
-                    echo "<script>alert('Cadastrado com sucesso!');</script>";
-                }
-                else{
-                    echo "<script>alert('erro');</script>";
+
+                // --------------------------------------------------
+                // SOLUÇÃO TEMPORÁRIA !!!!!!!!!!!!!!!!!!!
+                // QUANDO TIVER APOIOS CADASTRADOS
+                // $senha->setCodApoio($apoio->getIdApoio());
+
+                $senha->setCodApoio("01");
+
+                //----------------------------------------------------
+
+                if ($senhaDAO->cadadastrarTF($senha)) {
+//                    echo "<script>alert('Cadastrado com sucesso!');</script>";
+                    Header('Location: http://localhost/SourcePHPTF2016/tf2016/inscricao.php?t=1');
+                } else {
+//                    echo "<script>alert('erro');</script>";
+                    Header('Location: http://localhost/SourcePHPTF2016/tf2016/inscricao.php?t=2');
                 }
             }
         } else {
-            echo "<script>alert('E-mail ja cadastrado!');</script>";
+//            echo "<script>alert('E-mail ja cadastrado!');</script>";
+            Header('Location: http://localhost/SourcePHPTF2016/tf2016/inscricao.php?t=3');
         }
-    }
-    else{
-        echo "senha nao identicas";
+    } else {
+//        echo "senha nao identicas";
+        Header('Location: http://localhost/SourcePHPTF2016/tf2016/inscricao.php?t=4');
     }
 }
 ?>

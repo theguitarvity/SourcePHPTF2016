@@ -126,12 +126,12 @@ function calcular(data) {
 
 function cpfValidate(data) {
 
-    if (data != "") {
-        var _data = data.substring(0, 3) + "." + data.substring(3, 6) +
-                "." + data.substring(6, 9) + "-" + data.substring(9, 11);
-        document.form.cpf.value = _data;
+//    if (data != "") {
+//        var _data = data.substring(0, 3) + "." + data.substring(3, 6) +
+//                "." + data.substring(6, 9) + "-" + data.substring(9, 11);
+//        document.form.cpf.value = _data;
         validacpf();
-    }
+//    }
 
 }
 
