@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`transformando` (
   `idTransformando` INT NOT NULL AUTO_INCREMENT,
   `nomeTransformando` VARCHAR(45) NOT NULL,
   `emailTransformando` VARCHAR(45) NOT NULL,
-  `rgTransfromando` VARCHAR(35) NOT NULL,
+  `rgTransformando` VARCHAR(35) NOT NULL,
   `cpfTransformando` VARCHAR(45) NOT NULL,
   `nascTransformando` DATE NULL,
   `idadeTransformando` DECIMAL(3) NULL,
@@ -68,19 +68,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`senha` (
   `senha` VARCHAR(100) NOT NULL,
   `idTransformando` INT NOT NULL,
-  `idApoio` INT NOT NULL,
-  INDEX `fk_senha_transformando_idx` (`idTransformando` ASC),
-  INDEX `fk_senha_apoio1_idx` (`idApoio` ASC),
-  CONSTRAINT `fk_senha_transformando`
-    FOREIGN KEY (`idTransformando`)
-    REFERENCES `mydb`.`transformando` (`idTransformando`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_senha_apoio1`
-    FOREIGN KEY (`idApoio`)
-    REFERENCES `mydb`.`apoio` (`idApoio`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `idApoio` INT NOT NULL)
 ENGINE = InnoDB;
 
 
