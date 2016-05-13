@@ -1,3 +1,7 @@
+Versão: UI-20160513-MG
+
+	*Adicionado layout do dashboard do Apoio (dashboardApoioLayout.html)
+
 Versão: UI-20160507-MG
 
 	*Adicionado novas funções em assets/js/main.js (calculateAge(), calcular(), cpfValidate() e validacpf())
