@@ -80,7 +80,7 @@ $pdo = $conn->Connect();
                         </table>  
                     </div>
                     <h4>Informações</h4>
-                    <p>São {<?php echo $query->rowCount();?>} inscritos e {número de não pagos} ainda <b>não</b> pagaram a inscrição.</p>
+                    <p>São <?php echo $query->rowCount();?> inscritos e {número de não pagos} ainda <b>não</b> pagaram a inscrição.</p>
 
                     <p>// Imaginei abrir um pop-up para editar e outro para excluir.. no editar teria um formulário com os valores já preenchidos e no excluir, pediria a senha.</p>
                 </div>

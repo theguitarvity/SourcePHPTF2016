@@ -47,7 +47,7 @@
                             <a href="#" class="icon fa-angle-down">Menu</a>
                             <ul>
                                 <li><a href="sobre.html">Sobre</a></li>
-                                <li><a href="inscricao.php.html">Inscrição</a></li>
+                                <li><a href="inscricao.php">Inscrição</a></li>
                                 <li><a href="elements.html">Elements</a></li>
                                 <li>
                                     <a href="#">Submenu</a>
@@ -60,7 +60,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#" class="button">Inscreva-se</a></li>
+                        <li><a href="login.php" class="button">Minha inscrição</a></li>
                     </ul>
                 </nav>
             </header>
