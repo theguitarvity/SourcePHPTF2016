@@ -1,3 +1,7 @@
+Versão: UI-20160514-MG
+
+	*Adicionado layout da página de login do Apoio (admin.php)
+
 Versão: UI-20160513-MG
 
 	*Adicionado layout do dashboard do Apoio (dashboardApoioLayout.html)
