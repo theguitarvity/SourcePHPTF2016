@@ -110,6 +110,22 @@ class TransformandoDAO {
             echo $ex->getFile();
         }
     }
+    //metodo responsavel por listar os transfromandos cadastrados 
+    
+    
+    
+    function listar(){
+        try {
+            $stmt = $this->pdo->require("SELECT nomeTransformando, emailTransformando FROM transformando");
+            $stmt->execute();
+            
+            
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+            echo $ex->getLine();
+            echo $ex->getFile();
+        }
+    }
 
 }
 

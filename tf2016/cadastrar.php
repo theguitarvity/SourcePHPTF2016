@@ -53,7 +53,7 @@ if (isset($_POST['btn_cad'])) {
 
                 if ($senhaDAO->cadadastrarTF($senha)) {
 //                    echo "<script>alert('Cadastrado com sucesso!');</script>";
-                    Header('Location: http://localhost/SourcePHPTF2016/tf2016/inscricao.php?t=1');
+                    Header('Location: http://localhost/tf2016/inscricao.php?t=1');
                 } else {
 //                    echo "<script>alert('erro');</script>";
                     Header('Location: http://localhost/SourcePHPTF2016/tf2016/inscricao.php?t=2');
