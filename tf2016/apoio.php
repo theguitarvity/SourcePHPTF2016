@@ -4,7 +4,7 @@
 -->
 <html>
     <head>
-        <title>Inscrição - Transformers 2016 UP</title>
+        <title>Inscrição para apoios - Transformers 2016 UP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -75,7 +75,7 @@
                     <p class="text-uppercase">Preencha abaixo seus dados pessoais para reservar sua vaga.</p>
                 </header>
                 <div class="box">
-                    <form name="form" action="cadastrar.php" method="post">
+                    <form name="form" action="cadastrarApoio.php" method="post">
                         <h3 class="text-uppercase">Dados Pessoais</h3>
                         <div class="row uniform 50%"> 
                             <div class="6u 12u(mobilep)">

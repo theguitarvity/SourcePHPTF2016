@@ -15,7 +15,7 @@
         <div id="page-wrapper">
 
             <!-- Header -->
-            <header id="header" class="alt">
+            <header id="header">
                 <h1><a href="index.html">NGC</a> Transformers 2016</h1>
                 <nav id="nav">
                     <ul>
@@ -23,8 +23,8 @@
                         <li>
                             <a href="#" class="icon fa-angle-down">Menu</a>
                             <ul>
-                                <li><a href="sobre.html">Sobre</a></li>
-                                <li><a href="inscricao.php">Inscrição</a></li>
+                                <li><a href="generic.html">Sobre</a></li>
+                                <li><a href="contact.html">Inscrição/a></li>
                                 <li><a href="elements.html">Elements</a></li>
                                 <li>
                                     <a href="#">Submenu</a>
@@ -37,7 +37,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="login.php" class="button">Minha Inscrição</a></li>
+                        <li><a href="#" class="button">Inscreva-se</a></li>
                     </ul>
                 </nav>
             </header>
@@ -51,7 +51,7 @@
                 <div class="box">
                     <!--formulario de login abaixo-->
                     <form action="logar.php" method="post">
-                        <h3>Login</h3>
+                        <h3>E-mail e Senha</h3>
                         <br  />
                         <div class="row uniform 50%"> 
                             <div class="6u 12u(mobilep)">
