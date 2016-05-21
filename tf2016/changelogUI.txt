@@ -1,7 +1,19 @@
-Vers�o: UI-20160513-MG
+Versão: UI-20160521-MG
+
+        *Adicionado pasta 'requires_pages' que contém os arquivos que serão
+requisitados por outras páginas;
+        
+        *Adicionado '../requires_pages/apoio_dashboard.php' e
+'../requires_pages/transformando_dashboard.php';
+
+        *Agora a página '../dashboard.php' possui apenas um if que verifica o
+tipo do usuário logado na sessão e requisita a página correta para o seu tipo.
+
+Versão: UI-20160513-MG
 
 	*Adicionado layout do dashboard do Apoio (dashboardApoioLayout.html)
 
-Vers�o: UI-20160507-MG
+Versão: UI-20160507-MG
 
-	*Adicionado novas fun��es em assets/js/main.js (calculateAge(), calcular(), cpfValidate() e validacpf())
+	*Adicionado novas funções em assets/js/main.js (calculateAge(),
+calcular(), cpfValidate() e validacpf())
