@@ -3035,11 +3035,10 @@
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		/*background-image: url("images/overlay.png"), url("../../images/banner.jpg");*/
-                background-image: url("http://wallpaper.ultradownloads.com.br/109449_Papel-de-Parede-Campo-de-Trigo--109449_1400x1050.jpg");
-		background-position: top left,						center center;
+        background-image: url("http://wallpaper.ultradownloads.com.br/109449_Papel-de-Parede-Campo-de-Trigo--109449_1400x1050.jpg");
+		background-position: center center;
 		background-repeat: repeat,							no-repeat;
-		background-size: auto,							cover;
+		background-size: 100%;
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
@@ -3058,11 +3057,13 @@
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
+			text-shadow: 0px 0px 3px #000;
 		}
 
 		#banner p {
 			font-size: 1.25em;
 			margin-bottom: 1.75em;
+			text-shadow: 0px 0px 10px #000;
 		}
 
 		#banner input[type="submit"],
